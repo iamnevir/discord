@@ -110,7 +110,7 @@ export const ChatItem = ({
     form.reset({
       content: content,
     });
-  }, [content]);
+  }, [form, content]);
 
   const fileType = fileUrl?.split(".").pop();
 
@@ -217,11 +217,11 @@ export const ChatItem = ({
                   )}
                 />
                 <Button disabled={isLoading} size="sm" variant="primary">
-                  Lưu
+                  Save
                 </Button>
               </form>
               <span className="text-[10px] mt-1 text-zinc-400">
-                Nhấn ESC để hủy, ENTER để lưu.
+                Press escape to cancel, enter to save
               </span>
             </Form>
           )}
